@@ -1,0 +1,17 @@
+.paginate {
+  @include flex(flex-start);
+  cursor: pointer;
+  &__item {
+    @include size(60px);
+    @include flex(center);
+    border: 1px solid #EAF0ED;
+    list-style: none;
+    font-size: 20px;
+    color: #3F5D45;
+  }
+  &__active {
+    border: 1px solid #3F5D45;
+    background-color: #3F5D45;
+    color: #EAF0ED;
+  }
+}

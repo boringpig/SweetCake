@@ -1,0 +1,109 @@
+.login {
+  width: 780px;
+  margin: 35px auto 60px auto;
+  @include flex(flex-start);
+  .login-form {
+    @include size(390px, 380px);
+    background-color: #3F5D45;
+    position: relative;
+    &__title {
+      color: #EAF0ED;
+      text-align: center;
+      margin: 40px 0px;
+    }
+    .form-group {
+      @include size(330px, 56px);
+      @include flex(flex-start);
+      background-color: #EAF0ED;
+      margin: 0px auto;
+      &__icon {
+        @include size(56px);
+        @include flex(center);
+        color: #3F5D45;
+      }
+      &__input {
+        @include size(274px, 54px);
+        background-color: transparent;
+        border: none;
+        color: darken(#8DA291, 10%);
+        &::placeholder {
+          color: #8DA291;
+          font-weight: 330;
+          opacity: 0.9;
+        }
+      }
+    }
+    .form-check {
+      width: 330px;
+      margin: 14px auto 0px auto;
+    }
+    &__submit {
+      @include size(390px, 65px);
+      background-color: #FFE180;
+      border: 1px solid #FFE180;
+      color: #3F5D45;
+      font-size: 24px;
+      font-weight: 500;
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+      box-sizing: border-box;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+  .social-form {
+    @include size(390px,350px);
+    background-color: #EAF0ED;
+    margin-top: 15px;
+    &__title {
+      text-align: center;
+      color: #8DA291;
+      margin: 35px auto;
+      position: relative;
+      &::before {
+        content: '';
+        width: 256px;
+        border: .5px solid #8DA291;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+      & > span {
+        position: relative;
+        font-size: 24px;
+        font-weight: 300;
+        background-color: #EAF0ED;
+        padding: 0px 7px;
+        z-index: 2;
+      }
+    }
+    &__btn-group {
+      @include size(330px, 205px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0px auto;
+      &-item {
+        @include size(330px, 56px);
+        background-color: #FFFFFF;
+        list-style: none;
+        background-repeat: no-repeat;
+        background-size: 30%;
+        background-position: center;
+      }
+      .img-fb {
+        background-image: url('../image/icon-fb.jpg');
+      }
+      .img-google {
+        background-image: url('../image/icon-google.jpg');
+      }
+      .img-yahoo {
+        background-image: url('../image/icon-yahoo.jpg');
+        background-size: 30% 40%;
+      }
+    }
+  }
+}

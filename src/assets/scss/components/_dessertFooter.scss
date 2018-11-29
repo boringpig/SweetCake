@@ -1,0 +1,95 @@
+.footer {
+  .container {
+    @include size(100%);
+    @include flex(space-between);
+    position: relative;
+  }
+  .top {
+    @include size(100%, 116px);
+    @include flex(center);
+    background-color: #3F5D45;
+    padding: 0px 122px;
+    .subscribe-text {
+      @include flex(center);
+      font-size: 21px;
+      color: #ffffff;
+      font-weight: 300;
+      .subscribe-icon {
+        @include size(40px);
+        background-image: url('../image/logo-icon.png');
+        background-size: cover;
+        margin-right: 15px;
+      }
+    }
+    .subscribe-form {
+      @include flex(center);
+      .subscribe-input {
+        @include size(250px,56px);
+        background-color: #EAF0ED;
+        padding-left: 3px;
+        border: none;
+        font-size: 20px;
+        color: #3F5D45;
+      }
+      .subscribe-left {
+        @include size(56px,56px);
+        @include flex(center);
+        background-color: #EAF0ED;
+        color: #3F5D45;
+        font-size: 20px;
+      }
+      .subscribe-right {
+        @include size(64px,56px);
+        @include flex(center);
+        background-color: #FFE180;
+        color: #3F5D45;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .bottom {
+    @include size(100%, 341px);
+    background-color: #EAF0ED;
+    padding: 0px 122px;
+    .info {
+      padding-top: 30px;
+      &__logo {
+        background-image: url('../image/footer-logo.png');
+        background-size: cover;
+        width: 200px;
+        height: 40px;
+      }
+      &__detail {
+        margin-top: 80px;
+        color: #3F5D45;
+        line-height: 25px;
+        font-weight: 350;
+      }
+      &__icon {
+        @include flex(flex-start, center);
+        margin-top: 45px;
+        &__fb {
+          font-size: 35px;
+          color: #3F5D45;
+        }
+        &__at {
+          @include size(30px);
+          @include flex(center);
+          font-size: 25px;
+          color: #EAF0ED;
+          background-color: #3F5D45;
+          margin-right: 5px;
+        }
+      }
+    }
+    .copyright {
+      position: absolute;
+      bottom: 11%;
+      right: 0%;
+      color: #3F5D45;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.cart {
+  @include size(920px, 500px);
+  @include flex(space-between);
+  margin: 35px auto 60px auto;
+  .cart-list {
+    @include size(600px, 100%);
+    &__title {
+      @include size(100%, 65px);
+      @include flex(center);
+      background-color: #EAF0ED;
+      color: #3F5D45;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  .cart-detail {
+    @include size(300px, 260px);
+    background-color: #3F5D45;
+    position: relative;
+    &__title {
+      @include size(260px, 45px);
+      font-size: 24px;
+      font-weight: 350;
+      color: #EAF0ED;
+      text-align: center;
+      margin: 20px auto 0px auto;
+      border-bottom: 2px solid darken(#EAF0ED,20%);
+    }
+    &__content {
+      width: 260px;
+      @include flex(space-between);
+      margin: 15px auto 0px auto;
+      color: #EAF0ED;
+      font-weight: 100;
+      .total-name {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: 350;
+      }
+      .total-price {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: 350;
+      }
+    }
+    &__submit {
+      @include size(300px, 65px);
+      @include flex(center);
+      background-color: #FFE180;
+      color: #3F5D45;
+      font-size: 24px;
+      font-weight: 500;
+      position: absolute;
+      bottom: 0%;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      text-decoration: none;
+    }
+  }
+}
+
+

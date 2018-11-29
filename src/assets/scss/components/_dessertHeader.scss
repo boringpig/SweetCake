@@ -1,0 +1,30 @@
+.header {
+  @include size(940px,40px);
+  @include flex(space-between, center);
+  margin: 30px 42px;
+  .header-image {
+    width: 210px;
+    height: 38px;
+  }
+  .content {
+    width: 320px;
+    display: flex;
+    align-content: center;
+    & i {
+      color: $color-green;
+      margin-top: 2px;
+    }
+  }
+  .navbar {
+    @include size(215px, 22px);
+    @include flex(space-between, center);
+    margin-right: 70px;
+    &__item {
+      font-size: 16px;
+      list-style: none;
+      color: $color-green;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}

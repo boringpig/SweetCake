@@ -1,0 +1,75 @@
+.item {
+  width: 300px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  .item-top {
+    width: 100%;
+    height: 305px;
+    position: relative;
+    &__tap {
+      @include size(36px, 107px);
+      @include flex(center);
+      writing-mode: vertical-rl;
+      background-color: #3F5D45;
+      color: #EAF0ED;
+      position: absolute;
+      left: 7%;
+      top: 0%;
+      letter-spacing: 4px;
+    }
+    &__icon {
+      position: absolute;
+      right: 7%;
+      top: 6%;
+      font-size: 20px;
+      color: #3F5D45;
+    }
+    &__img {
+      background-position: 100%;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .img1 {
+      background-image: url('../image/heather-schwartz.jpg');
+    }
+    .img2 {
+      background-image: url('../image/strawcake.jpg');
+    }
+    .img3 {
+      background-image: url('../image/rezel-apacionado.jpg');
+    }
+  }
+  .item-content {
+    @include flex(center);
+    width: 100%;
+    height: 56px;
+    font-size: 20px;
+    text-align: center;
+    color: #3F5D45;
+    &__name {
+      @include flex(center);
+      @include size(173px, 100%);
+      font-weight: 300;
+      border: 1px solid #EAF0ED;
+      border-right: none;
+    }
+    &__price {
+      @include flex(center);
+      @include size(127px, 100%);
+      font-weight: 600;
+      border: 1px solid #EAF0ED;
+    }
+  }
+  .item-bottom {
+    @include flex(center);
+    width: 100%;
+    height: 65px;
+    background-color: #EAF0ED;
+    color: #3F5D45;
+    font-size: 24px;
+    font-weight: 600;
+    border: 1px solid #EAF0ED;
+  }
+}

@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,body {
+  background: $color-bg-white;
+  font-family: 'PingFang TC, Semibold';
+  font-size: 16px;
+  font-weight: 400;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.col-6 {
+  width: 50%;
+  margin-right: 6px;
+  position: relative;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+.col-12 {
+  width: 100%;
+  position: relative;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.progress {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &::after {
+    content: '';
+    width: 100%;
+    border: .5px solid #8DA291;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+.circle {
+  @include size(20px);
+  border: .5px solid #8DA291;
+  border-radius: 50%;
+  background-color: #3F5D45;
+  z-index: 2;
+  &.active {
+    border: 1px solid #EAF0ED;
+    position: relative;
+    &::before {
+      content: '';
+      @include size(14px);
+      background-color: #EAF0ED;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &.done {
+    border: 1px solid #EAF0ED;
+    position: relative;
+    &::before {
+      content: '';
+      @include size(14px);
+      background-color: #EAF0ED;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      content: '';
+      @include size(7px,4px);
+      border: 2px solid #3F5D45;
+      border-top: none;
+      border-right: none;
+      position: absolute;
+      left: 30%;
+      top: 27%;
+      transform: rotate(-45deg);
+    }
+  }
+  &.paid-done {
+    border: 1px solid #3F5D45;
+    position: relative;
+    &::before {
+      content: '';
+      @include size(14px);
+      background-color: #3F5D45;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      content: '';
+      @include size(7px,4px);
+      border: 2px solid #EAF0ED;
+      border-top: none;
+      border-right: none;
+      position: absolute;
+      left: 30%;
+      top: 27%;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+

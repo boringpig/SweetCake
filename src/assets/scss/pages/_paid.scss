@@ -1,0 +1,32 @@
+.paid {
+  @include size(940px,460px);
+  margin: 0px auto 50px auto;
+  position: relative;
+  &__img {
+    @include size(100%);
+    background-image: url('../image/paid.jpg');
+    background-size: cover;
+    background-position: 20% 50%;
+  }
+  &__back {
+    @include size(300px,65px);
+    @include flex(center);
+    background-color: #FFE180;
+    color: #3F5D45;
+    font-size: 24px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  &__title {
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    color: #3F5D45;
+  }
+}

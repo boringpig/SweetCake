@@ -1,0 +1,68 @@
+.cart-item {
+  @include size(600px, 140px);
+  @include flex(flex-start);
+  padding: 15px 0px;
+  &:not(:last-child) {
+    border-bottom: 1px solid #EAF0ED;
+  }
+  &__img {
+    @include size(110px);
+    background-image: url('../image/brooke-lark.jpg');
+    background-size: cover;
+    background-position: 100% 50%;
+  }
+  &__title {
+    padding: 0px 30px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #3F5D45;
+    & > h3 {
+      font-size: 20px;
+      font-weight: 350;
+    }
+    & > h4 {
+      font-size: 16px;
+      font-weight: 350;
+    }
+  }
+  &__number {
+    @include size(144px, 110px);
+    @include flex(flex-start, center);
+    &-icon {
+      @include size(48px);
+      @include flex(center);
+      font-size: 10px;
+      font-weight: 200;
+      color: #3F5D45;
+      border: 1px solid #EAF0ED;
+      cursor: pointer;
+      &:hover {
+        background-color: #EAF0ED;
+      }
+    }
+    &-input {
+      @include size(48px);
+      border: 1px solid #EAF0ED;
+      font-size: 18px;
+      color: #3F5D45;
+      text-align: center;
+    }
+  }
+  &__total-price {
+    @include flex(center);
+    padding: 0 30px;
+    height: 110px;
+    font-size: 17px;
+    color: #3F5D45;
+  }
+  &__delete-btn {
+    @include flex(center);
+    height: 108px;
+    font-size: 18px;
+    color: #8DA291;
+    padding-left: 5px;
+    cursor: pointer;
+  }
+}
