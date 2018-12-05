@@ -13,6 +13,9 @@ export default {
   name: 'App',
   components: {
     DessertHeader, DessertFooter
+  },
+  mounted () {
+    console.log(process.env)
   }
 }
 </script>
